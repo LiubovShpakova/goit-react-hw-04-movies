@@ -12,15 +12,15 @@ export default class HomePage extends Component {
 
   async componentDidMount() {
     try {
-      this.setState({ loading: true });
+      this.setState({ isLoading: true });
       const response = await API.searchTrending();
-      console.log(response);
+    
       this.setState({ movies: response.data.results });
-      console.log(response.data.results);
+      
     } catch (error) {
       this.setState({ error: error });
     } finally {
-      this.setState({ loading: false });
+      this.setState({ isLoading: false });
     }
   }
 
