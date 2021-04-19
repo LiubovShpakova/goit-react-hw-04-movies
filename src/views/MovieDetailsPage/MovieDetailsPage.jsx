@@ -45,8 +45,9 @@ class MovieDetailsPage extends Component {
         {isLoading && <Spinner />}
         <button onClick={this.handleGoBack}>Go Back</button>
         {movie.title && (
-          <>
+          <div className="movie__card">
             <MovieCard movie={movie} />
+            <hr />
             <h2>Additional information</h2>
             <ul>
               <li>
@@ -56,8 +57,8 @@ class MovieDetailsPage extends Component {
                     pathname: `${this.props.match.url}/cast`,
                     state: { from: this.props.location.state?.from },
                   }}
-                  className="navigation__link"
-                  activeClassName="navigation__active__link"
+                  className="nav__link"
+                  activeClassName="nav__active"
                 >
                   Cast
                 </NavLink>
@@ -68,8 +69,8 @@ class MovieDetailsPage extends Component {
                     pathname: `${this.props.match.url}/reviews`,
                     state: { from: this.props.location.state?.from },
                   }}
-                  className="navigation__link"
-                  activeClassName="navigation__active__link"
+                  className="nav__link"
+                  activeClassName="nav__active"
                 >
                   Reviews
                 </NavLink>
@@ -79,7 +80,8 @@ class MovieDetailsPage extends Component {
               <Route path={routes.cast} component={Cast} />
               <Route path={routes.reviews} component={Reviews} />
             </Suspense>
-          </>
+            <hr />
+          </div>
         )}
       </>
     );

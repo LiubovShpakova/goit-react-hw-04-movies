@@ -13,9 +13,26 @@ export default class MoviesPage extends Component {
     error: null,
   };
 
+  async componentDidMount() {
+    try {
+      this.setState({ loading: true });
+      if (this.props.location.search) {
+        const response = await API.searchMovies(this.props.location.search);
+        // console.log(response);
+        this.setState({ movies: response.data.results });
+        console.log(response.data.results);
+      }
+    } catch (error) {
+      this.setState({ error: error });
+    } finally {
+      this.setState({ loading: true });
+    }
+  }
+
   handleChange = (e) => {
     this.setState({ query: e.currentTarget.value });
   };
+
   handleSubmit = async (e) => {
     e.preventDefault();
 

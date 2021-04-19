@@ -4,6 +4,7 @@ const AppBar = () => {
   return (
     <header className="AppBar">
       <Navigation />
+      <hr />
     </header>
   );
 };

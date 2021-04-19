@@ -33,7 +33,7 @@ class CastPage extends Component {
             <p>No Actors</p>
           </div>
         ) : (
-          <ul>
+          <ul className="movie__list">
             {actors.map((elem) => (
               <li key={elem.id}>
                 <img
@@ -43,10 +43,9 @@ class CastPage extends Component {
                       : `${imgUrl}${elem.profile_path}`
                   }
                   alt={elem.name}
-                  width="60"
                 />
-                <p>{elem.original_name}</p>
-                <p>{elem.character}</p>
+                <p className="movie__actor">{elem.original_name}</p>
+                <p className="movie__character">{elem.character}</p>
               </li>
             ))}
           </ul>

@@ -7,7 +7,7 @@ export default class Spinner extends Component {
     return (
       <Loader
         type="ThreeDots"
-        color="#3f51b5"
+        color="rgb(205, 72, 209)"
         height={100}
         width={100}
         timeout={3000}

@@ -8,14 +8,14 @@ const Navigation = () => {
         exact
         to={routes.home}
         className="nav__link"
-        activeClassName="active"
+        activeClassName="nav__active"
       >
         Home
       </NavLink>
       <NavLink
         to={routes.moviesPage}
         className="nav__link"
-        activeClassName="active"
+        activeClassName="nav__active"
       >
         Movies
       </NavLink>

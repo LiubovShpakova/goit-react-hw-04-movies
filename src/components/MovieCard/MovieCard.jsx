@@ -6,7 +6,7 @@ const imgUrl = `https://image.tmdb.org/t/p/w500/`;
 const MovieCard = ({ movie }) => {
   return (
     <>
-      <div>
+      <div className="movie_img">
         <img
           src={
             movie.poster_path === undefined
@@ -14,18 +14,21 @@ const MovieCard = ({ movie }) => {
               : `${imgUrl}${movie.poster_path}`
           }
           alt={movie.title}
+          width="320"
         />
-        <div>
+        <div className="movie_discription">
           <h2>{movie.original_title ? movie.original_title : movie.title}</h2>
           <div>User Score: {movie.vote_average * 10}%</div>
-          <div>Overview:</div>
+          <h3>Overview:</h3>
           <p>{movie.overview}</p>
-          <div>Genres:</div>
-          <ul>
+          <h3>Genres:</h3>
+          <div className="movie_genres">
             {movie.genres.map((elem) => (
-              <li key={elem.id}>{elem.name}</li>
+              <p key={elem.id} className="movie_genres_item">
+                {elem.name}
+              </p>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </>

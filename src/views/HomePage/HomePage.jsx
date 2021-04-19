@@ -14,9 +14,8 @@ export default class HomePage extends Component {
     try {
       this.setState({ isLoading: true });
       const response = await API.searchTrending();
-    
+
       this.setState({ movies: response.data.results });
-      
     } catch (error) {
       this.setState({ error: error });
     } finally {

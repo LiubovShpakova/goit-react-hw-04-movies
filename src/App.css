@@ -1,46 +1,100 @@
-.App {
+h1,
+h2,
+h3 {
+  padding: 5px 20px;
+}
+.nav__link {
+  font-size: 20px;
+  padding: 5px 20px;
+  color: currentColor;
+  text-decoration: none;
+}
+.nav_p {
+  font-size: 16px;
+  font-weight: 700;
+  color: currentColor;
+  text-decoration: none;
+}
+.nav__active {
+  color: rgb(205, 72, 209);
+  text-decoration: underline;
+}
+.AppBar {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+    1px 1px 5px rgba(255, 255, 255, 1);
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  display: inline-block;
+  margin: 15px;
+  padding: 5px 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: rgb(205, 72, 209);
+  font-weight: 700;
+  transition: 0.2s linear;
+}
+button:hover {
+  box-shadow: 0 0 0 2px rgb(205, 72, 209) inset, 0 0 0 4px white inset;
+}
+.movie__card {
+  display: block;
+  padding: 5px 30px;
+}
+.movie__list {
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 24px;
+}
+.movie__item,
+.movie__character {
+  padding: 5px;
+  color: rgb(205, 72, 209);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie__actor {
+  padding: 5px;
+  color: rgb(205, 72, 209);
+  text-align: center;
+  font-weight: 700;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie_img {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px 30px;
 }
-
-.App-link {
-  color: #61dafb;
+.movie_discription {
+  padding: 5px 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie_genres {
+  display: flex;
 }
-.NavLink {
-  font-size: 20px;
-  color: currentColor;
+.movie_genres_item {
+  padding: 5px;
 }
-
-.NavLink--active {
-  color: palevioletred;
+input {
+  margin-bottom: 35px;
+  min-width: 200px;
+  padding: 5px 30px;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s linear;
+  color: rgb(116, 68, 120);
+}
+input:focus {
+  box-shadow: 0 0 0 2px rgb(205, 72, 209) inset, 0 0 0 4px white inset;
 }
